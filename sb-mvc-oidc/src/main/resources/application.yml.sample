@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          ais: 
+            client-name: Spring Boot MVC OIDC Example
+            client-id: sb-mvc-oidc-example
+            client-secret: 86c62fc4-011d-4a12-b70f-0bb76f43629a
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid, profile
+        provider:
+          ais:
+            issuer-uri: http://localhost:65062
